@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Japonês 360° — DEVS.LOG | Experiência Premium</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <div class="logo-dot"></div>
+      <span class="logo-name">3° Desenvolvimento de Sistemas</span>
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="visao">
+  <div class="container hero-content">
+    <h1 class="hero-title animate-on-load del-1">
+      Painel Japonês
+      <span>360°</span>
+    </h1>
+    <p class="hero-sub animate-on-load del-2">
+        Do pincel ao algoritmo: uma fusão entre a estética clássica do Sol Nascente e o desenvolvimento de alta performance, transformando conceitos históricos em uma estrutura visual rica, fluida e detalhada.
+    </p>
+  </div>
+
+  <!-- VIEWER BLOCK -->
+  <div class="viewer-wrap animate-on-load del-3">
+    
+    <div class="viewer" id="viewer">
+      <!-- Loading Overlay -->
+      <div class="viewer-loading" id="viewer-loading">
+        <div class="spinner"></div>
+        <p>Carregando experiência...</p>
+      </div>
+      
+      <!-- Hint Overlay (Aparece no início) -->
+      <div class="viewer-hint" id="viewer-hint">
+        <svg viewBox="0 0 24 24"><path d="M15 17h6v2h-6zm0-4h6v2h-6zm0-4h6v2h-6zM3 21h10V3H3v18zM5 5h6v14H5V5z"></path><path d="M7 11h2v2H7z" opacity=".5"></path></svg>
+        <p>Arraste para girar</p>
+      </div>
+
+      <!-- IMAGES CONTAINERS (Gerado por JS para performance) -->
+      <div id="frames-container">
+        <!-- FRAME INICIAL FIXO (Frame 001) -->
+        <img src="frames/ezgif-frame-001.png" class="active" id="initial-frame" alt="Painel Japonês 360 - Visualização Inicial">
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRUBBER BLOCK -->
+  <div class="scrubber-wrap animate-on-load del-4">
+    <div class="scrubber-track" id="track">
+      <div class="scrubber-fill" id="fill"></div>
+      <div class="scrubber-thumb" id="thumb"></div>
+    </div>
+    <p class="scrubber-hint">Use o controle ou arraste o modelo acima</p>
+  </div>
+</section>
+
+<!-<!-- SLIDER DE DETALHES -->
+<section class="details-slider animate-on-load del-5">
+  <div class="container">
+    <div class="slider-header">
+      <h2 class="section-tag">Galeria de Detalhes</h2>
+    </div>
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <!-- Substitua os SRCs pelas suas imagens de detalhe -->
+        <div class="slide-item"><img src="frames/details/detalhe1.jpeg" alt="Detalhe 1"></div>
+        <div class="slide-item"><img src="frames/details/detalhe2.jpeg" alt="Detalhe 2"></div>
+        <div class="slide-item"><img src="frames/details/detalhe3.jpeg" alt="Detalhe 3"></div>
+        <div class="slide-item"><img src="frames/details/detalhe4.jpeg" alt="Detalhe 4"></div>
+        <div class="slide-item"><img src="frames/details/detalhe5.jpeg" alt="Detalhe 5"></div>
+      </div>
+      
+      <div class="slider-nav">
+        <button class="nav-btn prev" onclick="moveSlider(-1)">&#10094;</button>
+        <button class="nav-btn next" onclick="moveSlider(1)">&#10095;</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato">
+  <div class="container footer-content">
+    <div class="footer-links">
+      <a href="#visao">Visão Geral</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 DEVS.LOG Experiências Digitais de Alto Padrão.</p>
+    <p class="footer-credit">Developed with <span>&hearts;</span> by 3° Desenvolvimento de Sistemas</p>
+  </div>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>
