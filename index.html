@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Painel Japonês 360° — DEVS.LOG | Experiência Premium</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./style.css">
-  
+  <title>Painel Japonês 360°</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -24,87 +25,84 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="visao">
+<section class="hero">
+
   <div class="container hero-content">
-    <h1 class="hero-title animate-on-load del-1">
+    <h1 class="hero-title">
       Painel Japonês
       <span>360°</span>
     </h1>
-    <p class="hero-sub animate-on-load del-2">
-      Criamos este site em 3D para que o público consiga visualizar melhor o painel e explorar cada detalhe de forma mais interativa. A proposta une elementos da cultura japonesa com tecnologia desenvolvida por nós mesmos, permitindo uma experiência diferente e mais dinâmica durante a apresentação.
 
+    <p class="hero-sub">
+      Criamos este site em 3D para que o público consiga visualizar melhor o painel e explorar cada detalhe de forma mais interativa. A proposta une elementos da cultura japonesa com tecnologia desenvolvida por nós mesmos, permitindo uma experiência diferente e mais dinâmica durante a apresentação.
     </p>
   </div>
 
-  <!-- VIEWER BLOCK -->
-  <div class="viewer-wrap animate-on-load del-3">
-    
+  <!-- VIEWER -->
+  <div class="viewer-wrap">
+
     <div class="viewer" id="viewer">
-      <!-- Loading Overlay -->
-      <div class="viewer-loading" id="viewer-loading">
-        <div class="spinner"></div>
-        <p>Carregando experiência...</p>
-      </div>
-      
-      <!-- Hint Overlay (Aparece no início) -->
-      <div class="viewer-hint" id="viewer-hint">
-        <svg viewBox="0 0 24 24"><path d="M15 17h6v2h-6zm0-4h6v2h-6zm0-4h6v2h-6zM3 21h10V3H3v18zM5 5h6v14H5V5z"></path><path d="M7 11h2v2H7z" opacity=".5"></path></svg>
-        <p>Arraste para girar</p>
+
+      <!-- FRAME -->
+      <img src="frames/ezgif-frame-001.png" class="active" id="current-frame">
+
+      <!-- HOTSPOTS -->
+      <div class="hotspot" style="top: 28%; left: 52%;">
+        <button class="hotspot-btn">+</button>
+
+        <div class="hotspot-card">
+          <h3>Monte Fuji</h3>
+
+          <p>
+            O Monte Fuji é um dos maiores símbolos do Japão. Ele representa equilíbrio, espiritualidade e a forte ligação entre o povo japonês e a natureza.
+          </p>
+        </div>
       </div>
 
-      <!-- IMAGES CONTAINERS (Gerado por JS para performance) -->
-      <div id="frames-container">
-        <!-- FRAME INICIAL FIXO (Frame 001) -->
-        <img src="frames/ezgif-frame-001.png" class="active" id="initial-frame" alt="Painel Japonês 360 - Visualização Inicial">
+      <div class="hotspot" style="top: 45%; left: 20%;">
+        <button class="hotspot-btn">+</button>
+
+        <div class="hotspot-card">
+          <h3>Sakura</h3>
+
+          <p>
+            A sakura simboliza a beleza passageira da vida, além da renovação e dos ciclos naturais presentes na cultura japonesa.
+          </p>
+        </div>
       </div>
+
+      <div class="hotspot" style="top: 55%; left: 75%;">
+        <button class="hotspot-btn">+</button>
+
+        <div class="hotspot-card">
+          <h3>Torii</h3>
+
+          <p>
+            O torii representa a passagem do mundo comum para o espiritual, sendo um símbolo de purificação e conexão com o sagrado.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- SCRUBBER BLOCK -->
-  <div class="scrubber-wrap animate-on-load del-4">
+  <!-- SCRUBBER -->
+  <div class="scrubber-wrap">
+
     <div class="scrubber-track" id="track">
       <div class="scrubber-fill" id="fill"></div>
       <div class="scrubber-thumb" id="thumb"></div>
     </div>
-    <p class="scrubber-hint">Use o controle ou arraste o modelo acima</p>
+
+    <p class="scrubber-hint">
+      Use o controle ou arraste o modelo acima
+    </p>
+
   </div>
+
 </section>
 
-<!-<!-- SLIDER DE DETALHES -->
-<section class="details-slider animate-on-load del-5">
-  <div class="container">
-    <div class="slider-header">
-      <h2 class="section-tag">Galeria de Detalhes</h2>
-    </div>
-    <div class="slider-container">
-      <div class="slider-track" id="sliderTrack">
-        <!-- Substitua os SRCs pelas suas imagens de detalhe -->
-        <div class="slide-item"><img src="frames/details/detalhe1.jpeg" alt="Detalhe 1"><p class="hero-sub animate-on-load del-2">O torii é uma estrutura tradicional encontrada na entrada de templos japoneses. Ele simboliza a passagem do mundo comum para o mundo espiritual, representando purificação, respeito e conexão com o sagrado.</p></div>
-        <div class="slide-item"><img src="frames/details/detalhe2.jpeg" alt="Detalhe 2"><p class="hero-sub animate-on-load del-2"></p></div>
-        <div class="slide-item"><img src="frames/details/detalhe3.jpeg" alt="Detalhe 3"><p class="hero-sub animate-on-load del-2"></p>A ponte japonesa representa a transição entre caminhos e fases da vida. Além disso, simboliza equilíbrio, harmonia e conexão, principalmente entre o ser humano e a natureza.</div>
-        <div class="slide-item"><img src="frames/details/detalhe4.jpeg" alt="Detalhe 4"><p class="hero-sub animate-on-load del-2"></p>A flor de cerejeira, conhecida como sakura, é um dos símbolos mais importantes da cultura japonesa. Ela representa a beleza passageira da vida, mostrando que os momentos devem ser valorizados, além de simbolizar renovação e os ciclos naturais da existência.</div>
-        <div class="slide-item"><img src="frames/details/detalhe5.jpeg" alt="Detalhe 5"><p class="hero-sub animate-on-load del-2"></p></div>
-      </div>
-      
-      <div class="slider-nav">
-        <button class="nav-btn prev" onclick="moveSlider(-1)">&#10094;</button>
-        <button class="nav-btn next" onclick="moveSlider(1)">&#10095;</button>
-      </div>
-    </div>
-  </div>
-</section>
+<script src="script.js"></script>
 
-<!-- FOOTER -->
-<footer id="contato">
-  <div class="container footer-content">
-    <div class="footer-links">
-      <a href="#visao">Visão Geral</a>
-    </div>
-    <p class="footer-copy">&copy; 2026 DEVS.LOG Experiências Digitais de Alto Padrão.</p>
-    <p class="footer-credit">Developed with <span>&hearts;</span> by 3° Desenvolvimento de Sistemas</p>
-  </div>
-</footer>
-
-<script src="/script.js"></script>
 </body>
 </html>
